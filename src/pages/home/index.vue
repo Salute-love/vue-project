@@ -14,9 +14,9 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newsList">
 		                    <img src="../../images/menu1.png" alt="">
 		                    <div class="mui-media-body">新闻资讯</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photoList">
 		                    <img src="../../images/menu2.png" alt="">
-		                    <div class="mui-media-body">图片分享</div></a></li>
+		                    <div class="mui-media-body">图片分享</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <img src="../../images/menu3.png" alt="">
 		                    <div class="mui-media-body">商品购买</div></a></li>
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     getBannerData() {
-      this.$http.get("http://www.lovegf.cn:8899/api/getlunbo").then(result => {
+      this.$http.get("api/getlunbo").then(result => {
         if (result.body.status === 0) {
           this.bannerList = result.body.message;
         } else {

@@ -39,6 +39,12 @@ Vue.filter('dateFormat',function(dateStr,pattern = 'YYYY-MM-DD HH:mm:ss'){
   return moment(dateStr).format(pattern)
 })
 
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
+import VuePreview from 'vue2-preview'
+Vue.use(VuePreview)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
